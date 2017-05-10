@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>审核</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<link rel="stylesheet" type="text/css" href="css/date.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body class="leader_body">
+		<header>
+			<div id="menu-wrap">
+		    <ul id="menu">
+		        <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+		        <li class="nav_left"> <a href="production-team.html">节目组</a>
+		            <ul>
+		                <li> <a href="">选虚拟坐席</a> </li>
+		                <li> <a href="">观察团报名</a> </li>
+		                <li> <a href="talk.html">虚拟坐席发言</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_left"><a href="audit.html">审核</a>
+		            <ul>
+		                <li> <a href="###">聊天信息审核</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+		        <li class="nav_right">
+		            <a href="###"><span></span>我的账户</a>
+		            <ul>
+		                <li><a href="">ID:15858869428</a></li>
+		                <li><a href="###" class="change_password">修改密码</a></li>
+		                <li><a href="log-in.html">退出登录</a></li>
+		            </ul>
+		        </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+		    </ul>
+		</div>
+		<!-- 修改密码 -->
+		<div class="modal fade" id="mymodal">
+	    <div class="modal-dialog">
+	        <div class="modal-content" id="chang_show">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="modal-title">修改登录密码</h4>
+				</div>
+				<div class="modal-body" id="modal-body">
+					<p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+					<p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+					<p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		</header>
+		<content>
+			<div class="auditContent">
+				<div class="auditContent_head">
+					<ol class="breadcrumb" id="auditContent_headl">
+		              <li><a href="#">当前位置</a></li>
+		              <li><a href="#">审核</a></li>
+		              <li class="active">聊天信息审核</li>
+		            </ol>
+		            <div class="auditContent_headr">
+		            	<span>敏感词检索</span>
+		            	<span class="entering">敏感词录入</span>
+		            </div>
+				</div>
+				<div class="auditContent_content">
+					<table class="table table-striped">
+							   <thead style="margin-top: 2px;"id="thead">
+							     <tr>
+							       <th>聊天内容</th>
+							       <th>来源</th>
+							       <th>发表时间</th>
+							       <th>账号状态</th>
+							       <th>发消息人</th>
+							       <th>操作</th>
+							     </tr>
+							   </thead>
+							   <tbody>
+							     <tr>
+							       <td>中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。 中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。中国财经事业的发展离不开人才的支撑。</td>
+							       <td>互动直播交流大厅</td>
+							       <td>2017-2-28</br>
+							       	   14：12：59
+							       </td>
+							       <td>在线</td>
+							       <td>hi接口的吧</td>
+							       <td>
+							       		<ul>
+							       			<li class="send">发送消息</li>
+							       			<li class="removethis">删除</li>
+							       			<li class="frostli">冻结</li>
+								       		<li class="change">禁言</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							       <td>中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。财经人才是财经事业发展的关键。</td>
+							       <td>张珺甯老师交流大厅</td>
+							       <td>2017-2-28</br>
+							       	14：12：59</td>
+							       <td id="offLine">
+										不在线
+							       </td>
+							       <td>hi接口的吧</td>
+							       <td>
+							       		<ul>
+							       			<li class="send">发送消息</li>
+							       			<li class="removethis">删除</li>
+							       			<li class="frostli">冻结</li>
+								       		<li class="change">禁言</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							       <td>中国财经事业的发展离不开人才的支撑。财经人才是财经事业发展的关键。财经人才是财经事业发展的关键。</td>
+							       <td>张珺甯老师交流大厅</td>
+							       <td>2017-2-28</br>
+							       	14：12：59</td>
+							       <td id="offLine">
+										不在线
+							       </td>
+							       <td>hi接口的吧</td>
+							       <td>
+							       		<!--<ul>
+							       			<li class="send">发送消息</li>
+							       			<li class="removethis">删除</li>
+							       			<li class="frostli">冻结</li>
+								       		<li class="change">禁言</li>
+								       	</ul>-->
+							       </td>
+							     </tr>
+							   </tbody>
+							</table>
+				</div>
+				<div id="footer_page">
+					<ul class="pager">
+					  <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+                      <li><a href="#">上一页</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li class="active"><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">6</a></li>
+                      <li><a href="#">7</a></li>
+                      <li><a href="#">8</a></li>
+                      <li><a href="#">9</a></li>
+                      <li><a href="#">10</a></li>
+                      <li><a href="#">下一页</a></li>
+                      <li id="pagelast"><a href="#"><img src="images/down.png" alt="" /></a></li>
+                    </ul>
+				</div>
+			</div>
+		</content>
+		<footer>
+		<!--敏感词录入-->
+		<div class="modal fade" id="entering">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">敏感词录入</h4>
+			</div>
+			<div class="modal-body" id="entering_body">
+				<textarea name="" rows="" cols="" placeholder="词组之间用“，”号隔开"></textarea>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">提交</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--发送消息-->
+		<div class="modal" id="send">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">发送消息</h4>
+			</div>
+			<div class="modal-body" id="send_body">
+				<ul>
+					<li>
+						<div class="checkboxFour">
+				  			<input type="checkbox" value="1" id="checkboxFourInput1" name="" />
+					  		<label for="checkboxFourInput1"></label>
+				  		</div>
+				  		<span>系统检测你的发言违规，如有疑问请联系客服。</span>
+					</li>
+					<li>
+						<div class="checkboxFour">
+				  			<input type="checkbox" value="2" id="checkboxFourInput2" name="" />
+					  		<label for="checkboxFourInput2"></label>
+				  		</div>
+				  		<span>您的头像包含违规信息请及时更换</span>
+					</li>
+					<li>
+						<div class="checkboxFour">
+				  			<input type="checkbox" value="3" id="checkboxFourInput3" name="" />
+					  		<label for="checkboxFourInput3"></label>
+				  		</div>
+				  		<span>您的昵称中存在敏感字符请及时修改</span>
+					</li>
+					<li>
+						<span class="marr">内容</span>
+						<textarea name="" rows="" cols=""></textarea>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">提交</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		</footer>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/backstage.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑—组长</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<link rel="stylesheet" type="text/css" href="css/date.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body class="leader_body">
+		<header>
+			<div id="menu-wrap">
+			    <ul id="menu">
+			        <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+			        <li class="nav_left"> <a href="production-team.html">节目组</a>
+			            <ul>
+			                <li> <a href="">选虚拟坐席</a> </li>
+			                <li> <a href="">观察团报名</a> </li>
+			                <li> <a href="talk.html">虚拟坐席发言</a></li>
+			            </ul>
+			        </li>
+			        <li class="nav_left"><a href="audit.html">审核</a>
+			            <ul>
+			                <li> <a href="audit.html">聊天信息审核</a></li>
+			            </ul>
+			        </li>
+			        <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+			        <li class="nav_right">
+			            <a href="###"><span></span>我的账户</a>
+			            <ul>
+			                <li><a href="">ID:15858869428</a></li>
+			                <li><a href="###" class="change_password">修改密码</a></li>
+			                <li><a href="log-in.html">退出登录</a></li>
+			            </ul>
+			        </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+			    </ul>
+			</div>
+				<!-- 修改密码 -->
+				<div class="modal fade" id="mymodal">
+			    <div class="modal-dialog">
+			        <div class="modal-content" id="chang_show">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="modal-title">修改登录密码</h4>
+						</div>
+						<div class="modal-body" id="modal-body">
+							<p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+							<p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+							<p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-primary">提交</button>
+						</div>
+					</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+		</header>
+		<content>
+			<div class="leader_content">
+					<div class="leader_content_left">
+						<div class="leader_content_left_head">
+							编辑部领导
+							<span id="leader_more"></span>
+						</div>
+						<div class="leader_content_left_all">
+							<div>查看所有大厅</div>
+							<ul>
+								<li>
+									<p>组长1<span class="crew_more"></span></p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+								<li>
+									<p>组长2<span class="crew_more"></span></p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+								<li>
+									<p>组长3<span class="crew_more"></span>	</p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="leader_content_right group-bor">
+						<ul class="grounp_nav">
+							<li>聊天窗口</li>
+							<li class="active">我的组员</li>
+							<li>大厅开关</li>
+						</ul>
+						<div class="chatWindow pages">
+							<div class="leader_content_rightl" style="margin-top: 20px;">
+							<div class="pushmessage"></div>
+							<ul>
+								<li class="active">
+									<p>互动直播交流大厅</p>
+									<p>杨红：这支股票近期涨势凶猛大家可以</p>
+									<hr />
+								</li>
+								<li>
+									<p>送老师交流大厅</p>
+									<p>杨红：这支股票近期涨势凶猛大家可以</p>
+									<hr />
+								</li>
+								<li>
+									<p>刘益良老师交流大厅</p>
+									<p>杨红：这支股票近期涨势凶猛大家可以</p>
+									<hr />
+								</li>
+							</ul>
+						</div>
+						<div class="leader_content_rightr groupTalk">
+							<p class="chat">
+								<span>互动直播交流大厅</span>
+								<span class="hall_set"></span>
+							</p>
+							<div class="chattingRecords">
+								<ul>
+									<li>
+										<div class="messageShow teachers">
+											<div><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"/></div>
+											<div>
+												<p>这支股票目前来看还是不错的，建议逢低适当12.80元左右可以考虑出手</p>
+												<p>12:16</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="messageShow teachers">
+											<div><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"/></div>
+											<div>
+												<p>这支股票目前来看还是不错的</p>
+												<p>12:16</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="messageShow users">
+											<div><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"/></div>
+											<div>
+												<p>刘老师您好，帮忙看看这支票，现在处于犹豫的状态，是否该持仓呢？</p>
+												<p>12:16</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="messageShow teachers">
+											<div><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"/></div>
+											<div>
+												<p>这支股票目前来看还是不错的，建议逢低适当12.80元左右可以考虑出手，目前来看还是不错的，建议逢低建议逢低适当12.80元左右可以考虑出手，目前来看的，建议逢低
+													<img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg" alt="" />
+												</p>
+												<p>12:16</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="palce" style="height: 300px;"></div>
+							</div>
+							<div class="chatTools">
+								<textarea name="" rows="" cols="" placeholder="输入你想说的话"></textarea>
+								 	<ul>
+								 		<li>全体禁言</li>
+								 		<li style="float: right;" class="pushtalk">发送</li>
+								 		<li style="float: right;" class="pc">图片</li>
+								 	</ul>
+							</div>
+						</div>
+						</div>
+						<div class="myGroup pages">
+							<div class="leader-manage" id="group_message">
+								<span class="fle_le account_num">开设组长账户</span>
+								<button>立即搜索</button>
+								<input type="text" placeholder="输入账号或名字" />
+							</div>
+							<table class="table table-striped">
+							   <thead>
+							     <tr>
+							       <th>账号</th>
+							       <th>密码</th>
+							       <th>使用人员</th>
+							       <th>账号状态</th>
+							       <th>操作</th>
+							     </tr>
+							   </thead>
+							   <tbody>
+							     <tr>
+							       <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td>正常</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							       <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td class="frost">冻结</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">解除</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							       <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td>正常</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							          <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td>正常</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							       <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td>正常</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							       <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td>李维斯</td>
+							       <td>正常</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							     <tr>
+							        <td>88888</td>
+							       <td>cfdmf2017</td>
+							       <td></td>
+							       <td>未使用</td>
+							       <td>
+							       		<ul>
+							       			<li class="removethis">删除账号</li>
+							       			<li class="frostli">冻结</li>
+							       			<li class="allot">分配大厅</li>
+								       		<li class="change">更换人员</li>
+								       	</ul>
+							       </td>
+							     </tr>
+							   </tbody>
+							</table>
+						</div>
+						<div class="on_off pages">
+							<div class="leader-manage" id="group_message">
+								<p class="fle_le halls">互动直播散户大厅
+									<img src="images/Slide Offb.png"/>
+								</p>
+								<button>立即搜索</button>
+								<input type="text" placeholder="输入账号或名字" />
+							</div>
+							<table class="table table-striped">
+							   <thead>
+							     <tr>
+							       <th>专家名称</th>
+							       <th>大厅状态</th>
+							       <th>创建权限</th>
+							       <th>大厅状态开关</th>
+							     </tr>
+							   </thead>
+							   <tbody>
+							     <tr>
+							       <td>李维斯</td>
+							       <td>关</td>
+							       <td class="jurisdiction"><img src="images/Slide Off.png" alt="" /></td>
+							       <td class="state"><img src="images/Slide Off.png" alt="" /></td>
+							     </tr>
+							      <tr>
+							        <td>李维斯</td>
+							       <td>关</td>
+							       <td class="jurisdiction"><img src="images/Slide Off.png" alt="" /></td>
+							       <td class="state"><img src="images/Slide Off.png" alt="" /></td>
+							       <td>
+							     </tr>
+							     <tr>
+							       <td>李维斯</td>
+							       <td>关</td>
+							       <td class="jurisdiction"><img src="images/Slide Off.png" alt="" /></td>
+							       <td class="state"><img src="images/Slide Off.png" alt="" /></td>
+							     </tr>
+							   </tbody>
+							</table>
+						</div>
+					</div>
+		</content>
+		<footer>
+			<!--分配大厅-->
+			<div class="modal" id="allot_hall">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">分配到大厅</h4>
+			</div>
+			<div class="modal-body" id="allot_hall_body">
+				<ul>
+					<li>
+						<span>李大妮交流大厅</span>
+						<span class="hallNum">80001
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80002
+							<a href="###"></a>
+						</span>
+					</li>
+					<li>
+						<span>李大妮交流大厅</span>
+						<span class="hallNum">80003
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80004
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80005
+							<a href="###"></a>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--更换-->
+		<!--更换使用人员-->
+		<div class="modal" id="changeName-group" style="display: none;">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">输入新的使用人员名字</h4>
+			</div>
+			<div class="modal-body" id="changeName_body">
+				<input type="text" name="" />
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--大厅设置-->
+		<div class="modal" id="hallSet">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">交流大厅设置</h4>
+			</div>
+			<div class="modal-body" id="hallSet_body">
+				<span>公告</span>
+				<div class="hallSet_bodyl" id="hallSet_bodyl">
+					<p>1947 年，时装设计师 Elsa Schiaparelli 将“艳粉色”引入西方时尚圈。 桃色可以营造亲密氛围，减少攻击性和敌意。 由于听说粉色有一种镇定效果，有些球队会把客队的休息室漆成粉色。 对于粉色的研究发现，男性举重运动员在粉色房间内似乎感到力不从心，而女性举重运动员面对这种颜色反而会有变强的倾向。 糕点从粉色盒子里取出或盛在粉色盘子里时，尝起来会更美味</p>
+					<img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg" alt="" />
+					<div class="addimg"><span></span> <span>添加图片</span></div>
+				</div>
+				<div class="hallSet_bodyr">
+					<ul>
+						<li><span>名称</span><input type="text" placeholder="请输入大厅名称 " /></li>
+						<li><span>介绍</span><textarea placeholder="输入大厅相关介绍"></textarea></li>
+						<li>
+							<span>管理员</span>
+							<div>
+								<p class="gly">
+									<span>80001<a href="###"></a></span>
+									<span>80002<a href="###"></a></span>
+									<span>80003<a href="###"></a></span>
+								</p>
+								<span class="change_glydt">更换</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer" style="border-top:none;margin-top: 18px;">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">提交</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--更换管理员-->
+		<div class="modal" id="change_gly">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">输入新的大厅</h4>
+			</div>
+			<div class="modal-body" id="changegly_body">
+				<input type="text" name="" />
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- 开设组长账号 -->
+		<div class="modal fade" id="generate_account">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">随机账号开设完成</h4>
+			</div>
+			<div class="modal-body" id="generate_account_body">
+				<p> <span>账号:80001</span> <span>密码:1234</span></p>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		</footer>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/backstage.js"></script>
+	</body>
+</html>

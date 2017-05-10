@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>节目组</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<link rel="stylesheet" type="text/css" href="css/date.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body class="leader_body">
+  <header>
+			<div id="menu-wrap">
+		    <ul id="menu">
+		        <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+		        <li class="nav_left"> <a href="production-team.html">节目组</a>
+		            <ul>
+		                <li> <a href="">选虚拟坐席</a> </li>
+		                <li> <a href="">观察团报名</a> </li>
+		                <li> <a href="talk.html">虚拟坐席发言</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_left"><a href="audit.html">审核</a>
+		            <ul>
+		                <li> <a href="audit.html">聊天信息审核</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+		        <li class="nav_right">
+		            <a href="###"><span></span>我的账户</a>
+		            <ul>
+		                <li><a href="">ID:15858869428</a></li>
+		                <li><a href="###" class="change_password">修改密码</a></li>
+		                <li><a href="log-in.html">退出登录</a></li>
+		            </ul>
+		        </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+		    </ul>
+		</div>
+		<!-- 修改密码 -->
+		<div class="modal fade" id="mymodal">
+	    <div class="modal-dialog">
+	        <div class="modal-content" id="chang_show">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="modal-title">修改登录密码</h4>
+				</div>
+				<div class="modal-body" id="modal-body">
+					<p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+					<p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+					<p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		</header>
+<script type="text/javascript" src="js/backstage.js"></script>
+<content>
+  <div class="production-content">
+    <div class="production-header">
+      <div class="production-header-l">
+        <ul>
+          <li><p>今日参与抢占</p><p>虚拟座席人数</p></li>
+        </ul>
+        <h1>88888</h1>
+
+      </div>
+
+      <div class="production-header-m">
+        <ul>
+          <li>
+            <select class="form-control">
+              <option>按会员等级</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </li>
+
+          <li>
+            <select class="form-control">
+              <option>按年龄</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </li>
+
+          <li>
+            <select class="form-control">
+              <option>按性别</option>
+              <option>男</option>
+              <option>女</option>
+            </select>
+          </li>
+
+          <li>
+            <select class="form-control">
+              <option>按地区</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="production-header-r">
+        <ul>
+          <li>
+          <span>选好了(888名)</span>
+          </li>
+
+          <li><button type="button" class="btn btn-primary">随机选取300名</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="production-container">
+      <ul>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>26岁</li>
+              <li>男</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>26岁</li>
+              <li>男</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+        <li class="info-msg" data-toggle="modal" data-target="#myModal">
+          <img src="images/person01.png" alt="">
+          <div class="person-name">
+            <p>黄金讲师</p>
+            <ul>
+              <li>男</li>
+              <li>26岁</li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="info-pagination">
+      <div id="footer_page">
+        <ul class="pager">
+          <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+          <li><a href="#">上一页</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">下一页</a></li>
+          <li id="pagelast"><a href="#"><img src="images/down.png" alt=""/></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</content>
+<!--组员详细资料 Modal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">黄金讲师的详细资料</h4>
+      </div>
+      <div class="modal-body modal-body_info">
+        <ul class="info-img">
+          <img src="images/person01.png" alt="">
+        </ul>
+
+        <ul>
+          <li>用户昵称</li>
+          <li>年龄</li>
+          <li>登录手机号</li>
+          <li>会员等级</li>
+        </ul>
+
+        <ul class="info-color">
+          <li>黄金讲师</li>
+          <li>26岁</li>
+          <li>18618888888</li>
+          <li>5星级</li>
+        </ul>
+
+        <ul>
+          <li>所在地区</li>
+          <li>性别</li>
+          <li>金币余额</li>
+        </ul>
+
+        <ul class="info-color">
+          <li>北京朝阳</li>
+          <li>男</li>
+          <li>1000</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/backstage.js"></script>
+</body>
+</html>

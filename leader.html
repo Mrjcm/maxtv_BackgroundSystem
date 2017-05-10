@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑—领导</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<link rel="stylesheet" type="text/css" href="css/date.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jedate.js" type="text/javascript"></script>
+	</head>
+	<body class="leader_body">
+		<header>
+			<div id="menu-wrap">
+		    <ul id="menu">
+		        <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+		        <li class="nav_left"> <a href="production-team.html">节目组</a>
+		            <ul>
+		                <li> <a href="">选虚拟坐席</a></li>
+		                <li> <a href="">观察团报名</a></li>
+		                <li> <a href="talk.html">虚拟坐席发言</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_left"><a href="audit.html">审核</a>
+		            <ul>
+		                <li> <a href="audit.html">聊天信息审核</a></li>
+		            </ul>
+		        </li>
+		        <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+		        <li class="nav_right">
+		            <a href="###"><span></span>我的账户</a>
+		            <ul>
+		                <li><a href="">ID:15858869428</a></li>
+		                <li><a href="###" class="change_password">修改密码</a></li>
+		                <li><a href="log-in.html">退出登录</a></li>
+		            </ul>
+		        </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+		    </ul>
+		</div>
+		<!-- 修改密码 -->
+		<div class="modal fade" id="mymodal">
+	    <div class="modal-dialog">
+	        <div class="modal-content" id="chang_show">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="modal-title">修改登录密码</h4>
+				</div>
+				<div class="modal-body" id="modal-body">
+					<p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+					<p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+					<p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		</header>
+		<content>
+			<div class="leader_content">
+										<div class="leader_content_left">
+						<div class="leader_content_left_head">
+							编辑部领导
+							<span id="leader_more"></span>
+						</div>
+						<div class="leader_content_left_all">
+							<div>查看所有大厅</div>
+							<ul>
+								<li>
+									<p class="">组长1<span class="crew_more"></span></p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+								<li>
+									<p>组长2<span class="crew_more"></span></p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+								<li>
+									<p>组长3<span class="crew_more"></span>	</p>
+									<ul class="crew">
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+										<li>组员<span class="wordw">小张张</span></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="leader_content_right">
+						<div class="leader-manage">
+							<span class="account_num">开设组长账户</span>
+							<button>立即搜索</button>
+							<input type="text" placeholder="输入账号或名字" />
+							<div>正在运营的账号</div>
+						</div>
+						<ul class="account-manage">
+							<li id="leftmost">
+								<ul class="accountStatus">
+									<li>账号 <span class="details">80001</span></li>
+									<li>密码 <span class="details">cfdmf2017</span></li>
+									<li>状态 <span class="details">正常</span></li>
+									<li>组员<span class="details">5人</span></li>
+									<li>使用<span class="details userName">李维斯</span>
+										   <span class="change" id="2">更换</span>
+									</li>
+									<li>
+										<span class="set"></span>
+										<span class="allot">分配大厅</span>
+									</li>
+									<ul class="accountSet">
+										<!--设置-->
+										<li class="record">聊天记录</li>
+										<li class="removedata">删除数据</li>
+										<li class="inhibited">禁止登录</li>
+										<span class="close_win"></span>
+									</ul>
+								</ul>
+							</li>
+							<li>
+								<ul class="accountStatus">
+									<li>账号 <span class="details">80001</span></li>
+									<li>密码 <span class="details">cfdmf2017</span></li>
+									<li>状态 <span class="details">正常</span></li>
+									<li>组员<span class="details">5人</span></li>
+									<li>使用<span class="details userName">赵理瑞雪</span>
+										   <span class="change" id="2">更换</span>
+									</li>
+									<li>
+										<span class="set"></span>
+										<span class="allot">分配大厅</span>
+									</li>
+									<ul class="accountSet">
+										<!--设置-->
+										<li class="record">聊天记录</li>
+										<li class="removedata">删除数据</li>
+										<li class="inhibited">禁止登录</li>
+										<span class="close_win"></span>
+									</ul>
+								</ul>
+							</li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li id="leftmost">7</li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+			</div>
+		</content>
+		<footer>
+			<!--分配大厅-->
+		<div class="modal fade" id="allot_hall">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">分配到大厅</h4>
+			</div>
+			<div class="modal-body" id="allot_hall_body">
+				<ul>
+					<li>
+						<span>李大妮交流大厅</span>
+						<span class="hallNum">80001
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80002
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80001
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80001
+							<a href="###"></a>
+						</span>
+					</li>
+					<li>
+						<span>李大妮交流大厅</span>
+						<span class="hallNum">80003
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80004
+							<a href="###"></a>
+						</span>
+						<span class="hallNum">80005
+							<a href="###"></a>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--聊天数据-->
+		<div class="modal fade" id="chatdata" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">
+						<span>李维斯</span>的聊天数据
+					</h4>
+			</div>
+			<div class="modal-body" id="chatdata_body">
+				<div class="chatdata_bodyl">
+					<ul class="chatdata_bodyl_head">
+						<li>
+							今日发言
+							<span class="talk_date">日期</span>
+						</li>
+						<li>
+							<span class="talk_num">62608</span>条
+						</li>
+						<li>负责大厅</li>
+					</ul>
+					<ul class="chatdata_bodyl_foot">
+						<li class="active">张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+						<li>张军甯交流大厅</li>
+					</ul>
+				</div>
+				<div class="chatdata_bodyr">
+					<div class="warpbox fmy" style="min-height:500px;">
+  						<input class="datainp" id="indate" type="text" placeholder=""  readonly>
+				  	</div>
+				  	<script type="text/javascript">
+				    	jeDate({
+				        dateCell:"#indate",//isinitVal:true,
+				        format:"YYYY-MM-DD",
+				        isTime:false, //isClear:false,
+				        minDate:"2014-09-19 00:00:00"
+				    })
+				  	</script>
+				  	<div class="tabs">
+					  	<table class="table table-bordered talk_list" id="talk_list0">
+						   <thead>
+						     <tr>
+						       <th>时间</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list1">
+						   <thead>
+						     <tr>
+						       <th>2</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list2">
+						   <thead>
+						     <tr>
+						       <th>3</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list3">
+						   <thead>
+						     <tr>
+						       <th>4</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list4">
+						   <thead>
+						     <tr>
+						       <th>5</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list5">
+						   <thead>
+						     <tr>
+						       <th>6</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+						<table class="table table-bordered talk_list" id="talk_list6">
+						   <thead>
+						     <tr>
+						       <th>7</th>
+						       <th>发言条数</th>
+						     </tr>
+						   </thead>
+						   <tbody>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						        <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						     <tr>
+						       <td>2017-1-8</td>
+						       <td>88888</td>
+						     </tr>
+						   </tbody>
+						</table>
+				  	</div>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!--更换使用人员-->
+		<div class="modal fade" id="changeName">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">输入新的使用人员名字</h4>
+			</div>
+			<div class="modal-body" id="changeName_body">
+				<input type="text" name=""  id="change-val" placeholder="输入新的使用人员名字"/>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- 开设组长账号 -->
+		<div class="modal fade" id="generate_account">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">随机账号开设完成</h4>
+			</div>
+			<div class="modal-body" id="generate_account_body">
+				<p> <span>账号:80001</span> <span>密码:1234</span></p>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- 删除数据提示 -->
+		<div class="modal fade" id="removedata">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">消息提示</h4>
+			</div>
+			<div class="modal-body" id="generate_account_body">
+				<p>删除数据成功!</p>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<!-- 禁止登录 -->
+		<div class="modal fade" id="no-login">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="modal-title">消息提示</h4>
+			</div>
+			<div class="modal-body" id="generate_account_body">
+				<p>禁止登录成功成功!</p>
+			</div>
+			<div class="modal-footer" style="border-top:none">
+				<button type="button" class="btn btn-default" data-dismiss="modal" id="abolish">取消</button>
+				<button type="button" class="btn btn-primary" id="ensure">确定</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		</footer>
+		<script type="text/javascript" src="js/backstage.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+//		function update(id){
+//		    $.ajax({
+//		      type: "GET",
+//		      url: base_url + "customerController/selectById.do?isDelete=n&id="+id,
+//		      cache:false,
+//		      async:false,
+//		      dataType: "json",
+//		      success: function (response) {
+//		        console.log("1111")
+//		      }
+//		    });
+//		
+//		  };
+//		
+//	
+//			function setname(id){
+//			var formData = $("#forms").serialize();
+//			$.ajax({
+//			url:'www.baidu.com',
+//			type:'POST',
+//			async:false,
+//			cache:false,
+//			dataType:'JSON',
+//			data:formData,
+//			success:function(){
+//			console.log("success");
+//				$("#changeName").css({display:"none"});
+//			}
+//			
+//			});
+//				
+//			}
+		</script>
+
+	</body>
+</html>
