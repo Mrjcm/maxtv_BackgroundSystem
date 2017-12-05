@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>新闻管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body class="leader_body">
+  <header>
+			<div id="menu-wrap">
+		    <ul id="menu">
+		        <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+		        <li class="nav_left"> <a href="production-team.html">用户管理</a>
+		            <ul>
+		                <li> <a href="">充值数据</a> </li>
+		                <li> <a href="">注册数据</a> </li>
+		            </ul>
+		        </li>
+		        <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+		        <li class="nav_right">
+		            <a href="###"><span></span>我的账户</a>
+		            <ul>
+		                <li><a href="###">ID:15858869428</a></li>
+		                <li><a href="###" class="change_password">修改密码</a></li>
+		                <li><a href="log-in.html">退出登录</a></li>
+		            </ul>
+		        </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+		    </ul>
+		</div>
+		<!-- 修改密码 -->
+		<div class="modal fade" id="mymodal">
+	    <div class="modal-dialog">
+	        <div class="modal-content" id="chang_show">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="modal-title">修改登录密码</h4>
+				</div>
+				<div class="modal-body" id="modal-body">
+					<p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+					<p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+					<p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">提交</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+		</header>
+<script type="text/javascript" src="js/backstage.js"></script>
+<content>
+  <div class="production-content">
+  <!-- 新闻管理左边开始 -->
+    <div class="NewsManagementLeft">
+      <p class="NewsManagementHead">新闻管理</p>
+      <ul class="NewsManagementNav">
+        <li>热点新闻</li>
+        <li class="active">深度观点</li>
+        <li>独家点评</li>
+        <li>自选股时讯</li>
+      </ul>
+      <p class="NewsManagementHead">排行管理</p>
+      <ul class="NewsManagementNav">
+        <li>人气排行</li>
+        <li>荣耀排行</li>
+        <li>阅读排行</li>
+        <li>订阅排行</li>
+      </ul>
+    </div>
+  <!-- 新闻管理左边导航结束 -->
+  <!-- 新闻管理右边内容开始 -->
+  <div class="NewsManagementRight">
+     <div class="pay-info">
+      <div class="addNews" data-toggle="modal" data-target="#addNewsModal">添加新闻</div>
+      <form action="">
+        <label for="title">标题:</label>
+        <input type="text" name="title" id="title">
+
+        <label for="startTime">时间:</label>
+        <input type="date" name="startTime" id="startTime" >
+
+        <label for="where">来源:</label>
+        <input type="text" name="where" id="where">
+
+        <button type="submit" class="btn"> 查 询</button>
+        <button type="reset" class="btn btn-defulte">清空查询</button>
+
+      </form>
+    </div>
+
+    <div class="pay-table">
+      <table class="table table-bordered">
+          <thead>
+            <tr style="text-align: center;background: #D8D8D8;">
+              <th>新闻ID</th>
+              <th>标题</th>
+              <th>创建时间</th>
+              <th>来源</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>用户昵称</td>
+              <td style="width: 450px;">标题文字内容摘要限制30个字，超长显示”…”</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>迈视网</td>
+              <td>
+                <span class="label NewsCompile" data-toggle="modal" data-target="#addNewsModal">编辑</span>
+                <span class="label label-default removeNews">删除</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td>用户昵称</td>
+              <td style="width: 450px;">标题文字内容摘要限制30个字，超长显示标题文字内容摘要”…”</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>迈视网</td>
+              <td>
+                <span class="label NewsCompile" data-toggle="modal" data-target="#addNewsModal">编辑</span>
+                <span class="label label-default removeNews">删除</span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+
+    <div class="info-pagination">
+      <div id="footer_page">
+        <ul class="pager">
+          <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+          <li><a href="#">上一页</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">下一页</a></li>
+          <li id="pagelast"><a href="#"><img src="images/down.png" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<!-- 新闻管理右边结束 -->
+  </div>
+</content>
+<!-- 添加新闻(编辑新闻） Modal-->
+<div class="modal fade" id="addNewsModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 750px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" >添加新闻(编辑新闻）</h4>
+      </div>
+      <div class="modal-body">
+          <ul class="addUsers addTeacher">
+              <li>
+                  新闻ID:&nbsp;&nbsp;&nbsp;
+                  <input type="text" placeholder="2017101900009" style="width: 236px;">
+                  来源:
+                  <input type="text" placeholder="迈视网">
+              </li>
+              <li>
+                  <span style="float: left;">新闻标题:</span>
+                  <textarea class="addNewsTitle" placeholder="证监会审核力度加大：IPO终止审查猛增"></textarea>
+              </li>
+              <li>
+                  <span style="float: left;">原链接:&nbsp;&nbsp;&nbsp;</span>
+                  <textarea class="addNewsTitle" placeholder="http://finance.sina.com.cn/stock/newstock/zxdt/2017-10-19/doc-ifymvuyt4468943.shtml"></textarea>
+              </li>
+              <li id="eacherInformation">
+                   <span style="width: 53px;">新闻内容:</span>
+                   <textarea placeholder="历任操盘手、华融证券首席投资顾问(期间于2011年12月13日推荐长城汽车、于2014年推荐中信证券等牛股期间代表华融证券获得上交所50ETF期权策略大赛二等奖与入围奖)这个输入框需要自适应文字长度"></textarea>
+              </li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="ensure">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 添加新闻(编辑新闻） end -->
+<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" id="userInfoModallist">
+    <!-- inner start -->
+        <div class="userInfoModallist_inner">
+         <!--用户信息主面板 -->
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+        </div>
+        <div class="modal-body">
+             <ul class="addUsers">
+                    <li>
+                     用户昵称
+                     <input type="text" placeholder="尼古纳斯">
+                     <span class="placespan"></span>
+                     手机号
+                     <input type="text" placeholder="15888888888" style="margin-left: 20px;">
+                   </li>
+                   <li>
+                    <p>会员等级</p>
+                    <select class="form-control">
+                      <option>至尊会员</option>
+                      <option>普通会员</option>
+                      <option>超级会员</option>
+                      <option>专属会员</option>
+                    </select>
+                    <span class="placespan"></span>
+                    <p style="margin-left: 4px;">用户状态</p>
+                    <select class="form-control">
+                      <option>正常</option>
+                      <option>禁用</option>
+                    </select>
+                  </li>
+                  <li>
+                    登录方式<input type="text" placeholder="微信登录">
+                  </li>
+                  <li>
+                    金币余额<input type="text" placeholder="1000">
+                    <span class="label label-warning" style="margin-left: 25px;" id="goGoldCoinModal">金币明细</span>
+                    <span class="label label-primary" id="goPayModal">充值记录</span>
+                  </li>
+                  <li class="upP">
+                   <div id="updateCoverImgShowSpan4" style="text-align: left;" class="showUserP"></div>
+                   <div class="uppic">更换头像
+                    <input type="file" id="updateCoverImg4" name="file" style="margin-bottom:10px;height:30px;width:70px;border:none;opacity: 0;">
+                  </div>
+                </li>
+            </ul>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="ensure" >修改</button>
+      </div>
+    </div>
+  </div>
+  <!-- 信息主面板结束 -->
+<!-- 用户资料  userInfoModal end-->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

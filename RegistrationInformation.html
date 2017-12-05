@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body class="leader_body">
+  <header>
+      <div id="menu-wrap">
+        <ul id="menu">
+          <li class="nav_left active"> <a href="production-team.html">用户管理</a>
+                <ul style="left: 2px;">
+                    <li> <a href="gopay.html">充值数据</a> </li>
+                      <li> <a href="RegistrationInformation.html">注册数据</a> </li>
+                    <li> <a href="goldDetail.html">金币明细</a> </li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+            <li class="nav_left"><a href="production-team.html">节目组</a>
+                <ul>
+                    <li> <a href="production-team.html">选虚拟坐席</a> </li>
+                    <li> <a href="observe－team.html">观察团报名</a> </li>
+                    <li> <a href="talk.html">虚拟坐席发言</a></li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="audit.html">审核</a>
+                <ul>
+                    <li> <a href="###">聊天信息审核</a></li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="privilege.html" target="_blannk">优惠券</a></li>
+            <li class="nav_left"><a href="NewsManagement.html" target="_blannk">新闻管理</a></li>
+            <li class="nav_left"><a href="payment_management.html" target="_blannk">支付管理</a></li>
+            <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+            <li class="nav_right">
+                <a href="###"><span></span>我的账户</a>
+                <ul style="left: 20px;">
+                    <li><a href="###">逆苍</a></li>
+                    <li><a href="###" class="change_password">修改密码</a></li>
+                    <li><a href="log-in.html">退出登录</a></li>
+                </ul>
+            </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+        </ul>
+    </div>
+    <!-- 修改密码 -->
+    <div class="modal fade" id="mymodal">
+      <div class="modal-dialog">
+          <div class="modal-content" id="chang_show">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modal-title">修改登录密码</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+          <p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+          <p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">提交</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+    </header>
+<script type="text/javascript" src="js/backstage.js"></script>
+<content>
+  <div class="production-content">
+    <div class="production-header">
+      <ol class="breadcrumb">
+        <li>当前位置</li>
+        <li><a href="#">用户管理</a></li>
+        <li class="active"><a href="RegistrationInformation.html">注册数据</a></li>
+      </ol>
+      <div class="export-data">
+         <div class="btn-group" id="userp">
+          <button type="button" class="btn btn-default ">添加用户</button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-left: 1px solid #ffffff;">
+            <span class="caret"></span>
+            <span class="sr-only">添加用户</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li data-toggle="modal" data-target="#userpModal"><a href="#">用户</a></li>
+            <li data-toggle="modal" data-target="#teacherModal"><a href="#">老师</a></li>
+          </ul>
+        </div>
+        <span>导出所有数据</span>
+      </div>
+    </div>
+
+     <div class="pay-info">
+      <form action="">
+        <label for="iphone">手机号:</label>
+        <input type="text" name="iphone" id="iphone">
+
+        <label for="nikeName">昵称:</label>
+        <input type="text" name="nikeName" id="nikeName">
+
+        <label for="userType">用户类型:</label>
+        <select name="userType" id="userType">
+          <option value="1">全部</option>
+          <option value="2">老师</option>
+          <option value="3">用户</option>
+        </select>
+
+        <label id="isCheked">
+          <input type="checkbox">
+        </label>
+        <label for="startTime">注册时间起:</label>
+        <input type="date" name="startTime" id="startTime">
+
+        <label for="endTime">注册时间止:</label>
+        <input type="date" name="endTime" id="endTime">
+
+        <button type="submit" class="btn btn-primary"> 查 询</button>
+        <button type="reset" class="btn btn-defulte">清空查询</button>
+
+      </form>
+    </div>
+
+    <div class="pay-table">
+      <table class="table table-bordered">
+          <thead>
+            <tr style="text-align: center;">
+              <th style="text-align: center;">
+                <label>
+                  <input type="checkbox">
+                </label>
+              </th>
+              <th style="text-align: center;">用户昵称</th>
+              <th style="text-align: center;">手机号</th>
+              <th style="text-align: center;">注册时间</th>
+              <th>最后登入时间</th>
+              <th>最后登入IP</th>
+              <th>APP版本</th>
+              <th>金币余额</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: center;">
+                <input type="checkbox">
+              </td>
+              <td>用户昵称</td>
+              <td>1388888888</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>221.211.58.157</td>
+              <td>1.5</td>
+              <td>1000</td>
+              <td>正常</td>
+              <td>
+                <span class="label label-primary" data-toggle="modal" data-target="#userInfoModal">用户资料</span>
+                <span class="label label-default">删除</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="text-align: center;">
+                <input type="checkbox">
+              </td>
+              <td>用户昵称</td>
+              <td>1388888888</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>2017-06-05 18：43：20</td>
+              <td>221.211.58.157</td>
+              <td>1.4</td>
+              <td>21452</td>
+              <td>已禁用</td>
+              <td>
+                <span class="label label-primary" data-toggle="modal" data-target="#userInfoModal">用户资料</span>
+                <span class="label label-default">删除</span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+
+    <div class="info-pagination">
+      <div id="footer_page">
+        <ul class="pager">
+          <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+          <li><a href="#">上一页</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li class="active"><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><a href="#">10</a></li>
+          <li><a href="#">下一页</a></li>
+          <li id="pagelast"><a href="#"><img src="images/down.png" alt="" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</content>
+<!--添加用户 Modal-->
+<div class="modal fade" id="userpModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="addUsers">
+          <li>
+             用户昵称
+             <input type="text" placeholder="尼古纳斯">
+             <span class="placespan"></span>
+             手机号
+             <input type="text" placeholder="15888888888" style="margin-left: 20px;">
+          </li>
+          <li>
+            <p>会员等级</p>
+               <select class="form-control">
+                <option>至尊会员</option>
+                <option>普通会员</option>
+                <option>超级会员</option>
+                <option>专属会员</option>
+              </select>
+              <span class="placespan"></span>
+            <p style="margin-left: 4px;">用户状态</p>
+              <select class="form-control">
+                <option>正常</option>
+                <option>禁用</option>
+              </select>
+          </li>
+          <li>
+            登录方式<input type="text" placeholder="微信登录">
+          </li>
+          <li>
+            金币余额<input type="text" placeholder="1000">
+          </li>
+          <li class="upP">
+            <div id="pshow" style="text-align: left;" class="showUserP"></div>
+            <div class="uppic">更换头像
+                  <input type="file" id="updateCoverImg" name="file" style="margin-bottom:10px;height:30px;width:70px;border:none;opacity: 0;">
+            </div>
+          </li>
+        </ul>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="ensure" data-toggle="modal" data-target="#userpModal">确定修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 添加老师 Modal-->
+<div class="modal fade" id="teacherModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 750px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" >添加老师</h4>
+      </div>
+      <div class="modal-body">
+          <ul class="addUsers addTeacher">
+              <li>
+                  用户昵称
+                  <input type="text" placeholder="尼古纳斯">
+                  手机号&nbsp;&nbsp;&nbsp;
+                  <input type="text" placeholder="15888888888">
+                  身份证号
+                  <input type="text" placeholder="523427196209850975" style="width: 154px;">
+              </li>
+              <li>
+                    粉丝数&nbsp;&nbsp;&nbsp;
+                 <input type="text" placeholder="55555">
+                    金币余额
+                 <input type="text" placeholder="15888">
+                    好评度&nbsp;&nbsp;&nbsp;
+                 <input type="text" placeholder="4.98">
+              </li>
+              <li>
+                  所属机构
+                 <input type="text" placeholder="证券通">
+                 证券资格号
+                 <input type="text" placeholder="S1490611100009" style="width: 124px;">
+              </li>
+              <li class="trade">
+                  <p>当前职业</p>
+                  <select class="form-control" style="width: 124px;">
+                      <option>股票分析师</option>
+                      <option>超级分析师</option>
+                      <option>投资顾问</option>
+                  </select>
+                  <p style="margin-left: 72px;">用户状态</p>
+                  <select class="form-control" style="width: 80px;">
+                    <option>正常</option>
+                    <option>禁用</option>
+                  </select>
+              </li>
+              <li id="eacherInformation">
+                   <span>老师介绍</span>
+                   <textarea placeholder="历任操盘手、华融证券首席投资顾问(期间于2011年12月13日推荐长城汽车、于2014年推荐中信证券等牛股期间代表华融证券获得上交所50ETF期权策略大赛二等奖与入围奖)这个输入框需要自适应文字长度"></textarea>
+              </li>
+              <li class="upP">
+                <div>
+                  <div id="updateCoverImgShowSpan1" style="text-align: left;" class="showUserP"></div>
+                    <div class="uppic">更换头像
+                        <input type="file" id="updateCoverImg1" name="file" style="margin-bottom:10px;height:30px;width:70px;border:none;opacity: 0;">
+                    </div>
+                </div>
+                <div>
+                   <div id="updateCoverImgShowSpan2" style="text-align: left;" class="showUserP"></div>
+                    <div class="uppic" style="width: 70px;">上传半身像
+                        <input type="file" id="updateCoverImg2" name="file" style="margin-bottom:10px;height:30px;width:70px;border:none;opacity: 0;">
+                    </div>
+                </div>
+              </li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="ensure" data-toggle="modal" data-target="#userpModal">确定修改</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- addteacher end -->
+ <!-- 用户资料  userInfoModal start-->
+<div class="modal fade" id="userInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" id="userInfoModallist">
+    <!-- inner start -->
+        <div class="userInfoModallist_inner">
+         <!--用户信息主面板 -->
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+        </div>
+        <div class="modal-body">
+             <ul class="addUsers">
+                    <li>
+                     用户昵称
+                     <input type="text" placeholder="尼古纳斯">
+                     <span class="placespan"></span>
+                     手机号
+                     <input type="text" placeholder="15888888888" style="margin-left: 20px;">
+                   </li>
+                   <li>
+                    <p>会员等级</p>
+                    <select class="form-control">
+                      <option>至尊会员</option>
+                      <option>普通会员</option>
+                      <option>超级会员</option>
+                      <option>专属会员</option>
+                    </select>
+                    <span class="placespan"></span>
+                    <p style="margin-left: 4px;">用户状态</p>
+                    <select class="form-control">
+                      <option>正常</option>
+                      <option>禁用</option>
+                    </select>
+                  </li>
+                  <li>
+                    登录方式<input type="text" placeholder="微信登录">
+                  </li>
+                  <li>
+                    金币余额<input type="text" placeholder="1000">
+                    <span class="label label-warning" style="margin-left: 25px;" id="goGoldCoinModal">金币明细</span>
+                    <span class="label label-primary" id="goPayModal">充值记录</span>
+                  </li>
+                  <li class="upP">
+                   <div id="updateCoverImgShowSpan4" style="text-align: left;" class="showUserP"></div>
+                   <div class="uppic">更换头像
+                    <input type="file" id="updateCoverImg4" name="file" style="margin-bottom:10px;height:30px;width:70px;border:none;opacity: 0;">
+                  </div>
+                </li>
+            </ul>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="ensure" data-toggle="modal" data-target="#userpModal">修改</button>
+      </div>
+    </div>
+  </div>
+  <!-- 信息主面板结束 -->
+  <!-- 充值记录 -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">充值记录</h4>
+        <br>
+        <span class="label label-primary goback-user-info goback">返回用户资料</span>
+
+      </div>
+
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="text-align: center;">消费金额</th>
+              <th style="text-align: center;">金币数量</th>
+              <th style="text-align: center;">赠送金币</th>
+              <th style="text-align: center;">时间</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr style="text-align: center;">
+              <td>100</td>
+              <td>100</td>
+              <td>2100</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>100</td>
+              <td>200</td>
+              <td>2300</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>100</td>
+              <td>100</td>
+              <td>2400</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>100</td>
+              <td>100</td>
+              <td>2500</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-footer">
+          <div id="footer_page">
+        <ul class="pager">
+          <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+          <li><a href="#">上一页</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">6</a></li>
+          <li><a href="#">7</a></li>
+          <li><a href="#">下一页</a></li>
+          <li id="pagelast"><a href="#"><img src="images/down.png" alt="" /></a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">金币明细</h4>
+        <br>
+        <span class="label label-primary goback-user goback">返回用户资料</span>
+      </div>
+
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th style="text-align: center;">行为</th>
+              <th style="text-align: center;">金币变动</th>
+              <th style="text-align: center;">金币变动后</th>
+              <th style="text-align: center;">时间</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr style="text-align: center;">
+              <td>像张军老师问股</td>
+              <td>-100</td>
+              <td>2100</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>充值</td>
+              <td>200</td>
+              <td>2300</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>充值奖励</td>
+              <td>100</td>
+              <td>2400</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+            <tr style="text-align: center;">
+              <td>活动奖励</td>
+              <td>100</td>
+              <td>2500</td>
+              <td>2017-06-08 18:18:18</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-footer">
+        <div id="footer_page">
+          <ul class="pager">
+            <li id="pagefirst"><a href="#"><img src="images/up.png" alt="" /></a></li>
+            <li><a href="#">上一页</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">下一页</a></li>
+            <li id="pagelast"><a href="#"><img src="images/down.png" alt="" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!--inner end -->
+        </div>
+    </div>
+</div>
+<!-- 用户资料  userInfoModal end-->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

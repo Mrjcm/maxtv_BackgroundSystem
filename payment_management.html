@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>支付管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/backstage.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+</head>
+<body class="leader_body">
+ <header>
+      <div id="menu-wrap">
+        <ul id="menu">
+          <li class="nav_left"> <a href="production-team.html">用户管理</a>
+                <ul style="left: 2px;">
+                    <li> <a href="gopay.html">充值数据</a> </li>
+                      <li> <a href="">注册数据</a> </li>
+                    <li> <a href="goldDetail.html">金币明细</a> </li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="leader.html" target="_blannk">编辑</a></li>
+            <li class="nav_left"><a href="production-team.html">节目组</a>
+                <ul>
+                    <li> <a href="">选虚拟坐席</a> </li>
+                    <li> <a href="observe－team.html">观察团报名</a> </li>
+                    <li> <a href="talk.html">虚拟坐席发言</a></li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="audit.html">审核</a>
+                <ul>
+                    <li> <a href="###">聊天信息审核</a></li>
+                </ul>
+            </li>
+            <li class="nav_left"><a href="privilege.html" target="_blannk">优惠券</a></li>
+            <li class="nav_left"><a href="NewsManagement.html" target="_blannk">新闻管理</a></li>
+            <li class="nav_left active"><a href="payment_management.html" target="_blannk">支付管理</a></li>
+            <li class="nav_right"><img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg"></li>
+            <li class="nav_right">
+                <a href="###"><span></span>我的账户</a>
+                <ul style="left: 20px;">
+                    <li><a href="###">逆苍</a></li>
+                    <li><a href="###" class="change_password">修改密码</a></li>
+                    <li><a href="log-in.html">退出登录</a></li>
+                </ul>
+            </li><li class="nav_right"><a href="leaderLookAll.html" style="padding: 0;">网站首页</a></li>
+        </ul>
+    </div>
+    <!-- 修改密码 -->
+    <div class="modal fade" id="mymodal">
+      <div class="modal-dialog">
+          <div class="modal-content" id="chang_show">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="modal-title">修改登录密码</h4>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <p><input type="text" name="username" placeholder="请输入您的原密码"> </p>
+          <p><input type="password" name="password" placeholder="请输入您的新密码"></p>
+          <p><input type="password" name="password" placeholder="重复输一次新密码" style="margin-bottom: 40px;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">提交</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+    </header>
+<script type="text/javascript" src="js/backstage.js"></script>
+<content>
+  <div class="production-content">
+  <!-- 新闻管理左边开始 -->
+    <div class="NewsManagementLeft">
+      <p class="NewsManagementHead">支付管理</p>
+      <ul class="NewsManagementNav">
+        <li class="active">订单统计</li>
+        <li>提现管理</li>
+        <li>财务汇总</li>
+      </ul>
+    </div>
+  <!-- 新闻管理左边导航结束 -->
+  <!-- 新闻管理右边内容开始 -->
+  <div class="NewsManagementRight">
+     <div class="pay-info">
+      <form action="">
+        <label for="startTime">订单创建时间起止:</label>
+        <input type="date" name="startTime" id="startTime" >
+        <span>——</span>
+        <input type="date" name="startTime" id="startTime" >
+        <span class="placeholderW"></span>
+        <button type="submit" class="btn"> 查 询</button>
+        <button type="reset" class="btn btn-defulte">清空查询</button>
+
+      </form>
+    </div>
+    <!-- 时段信息展示开始 -->
+    <div class="Time_information">
+      <ul class="Time_L">
+        <li>所选时间段</li>
+        <li>历史峰值</li>
+      </ul>
+      <table class="table">
+          <thead>
+            <tr>
+              <th>成功交易额</th>
+              <th>发起订单</th>
+              <th>成功订单</th>
+              <th>订单转化率</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="amount">
+              <td>208912<span>元</span></td>
+              <td>912<span>笔</span></td>
+              <td>912<span>笔</span></td>
+              <td>98.48%</td>
+            </tr>
+
+            <tr id="peak">
+              <td>208912<span>元</span></td>
+              <td>912<span>笔</span></td>
+              <td>912<span>笔</span></td>
+              <td>98.48%</td>
+            </tr>
+
+          </tbody>
+        </table>
+    </div>
+    <!-- 时段信息展示结束 -->
+      <div class="pay-info" style="margin-top: 20px;">
+      <form action="">
+        <label for="startTime">订单创建时间起止:</label>
+        <input type="text" name="startTime" id="startTime" >
+        <span>——</span>
+        <input type="text" name="startTime" id="startTime" >
+        <span class="placeholderW" style="width: 390px;"></span>
+        <button type="submit" class="btn"> 查 询</button>
+        <button type="reset" class="btn btn-defulte">清空查询</button>
+
+      </form>
+    </div>
+  <!-- 交易额曲线图开始 -->
+    <div class="Timechart">
+        <div id="Timechart"></div>
+    </div>
+    <!-- 交易额曲线图结束 -->
+     <div class="pay-info" style="margin-top: 20px;">
+      <form action="">
+        <label for="startTime">订单创建时间起止:</label>
+        <input type="text" name="startTime" id="startTime" >
+        <span>——</span>
+        <input type="text" name="startTime" id="startTime" >
+        <span class="placeholderW" style="width: 390px;"></span>
+        <button type="submit" class="btn"> 查 询</button>
+        <button type="reset" class="btn btn-defulte">清空查询</button>
+
+      </form>
+    </div>
+    <!-- 柱形图开始 -->
+    <div class="Time_barChart">
+        <div id="Time_barChart"></div>
+    </div>
+    <!-- 柱形图结束 -->
+  </div>
+  <!-- 新闻管理右边结束 -->
+  </div>
+</content>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    // 折线图
+    function chartsTab(){
+    var myChart = echarts.init(document.getElementById('Timechart'));
+    option = {
+       title: {
+        text: '交易额',
+        top:'3%',
+        left:'1%'
+    },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        grid: {
+            left: '2%',
+            right: '2%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : ['8-20','8-21','8-22','8-23','8-24','8-25','8-26','8-27','8-28','8-29','8-30','8-31']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'每日',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {lineStyle:{color:'#ffffff'}}},
+                data:[1500, 2320, 2010, 1540, 1900, 3300, 4100,2500,3200,5000,3210,5400],
+                itemStyle : { normal : {lineStyle:{color:'#51A5DE'}}}
+            }
+        ],
+        color : ['#51A5DE' , '#63BC6D ', '#ADBDD7 ', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
+    };
+      myChart.setOption(option);
+    };
+    chartsTab();
+    // 柱状图
+    function barChart(){
+       var myChart1 = echarts.init(document.getElementById('Time_barChart'));
+        option = {
+            grid: {
+            left: '2%',
+            right: '2%',
+            bottom: '3%',
+            containLabel: true
+        },
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['发起订单','成功订单'],
+                left:'1%',
+                top:'3%'
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    // dataView : {show: true, readOnly: false},
+                    // magicType : {show: true, type: ['line', 'bar']},
+                    // restore : {show: true},
+                    // saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['8-20','8-21','8-22','8-23','8-24','8-25','8-26','8-27','8-28','8-29','8-30','8-31']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'发起订单',
+                    type:'bar',
+                    data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                    markPoint : {
+                        data : [
+                            {type : 'max', name: '最大值'},
+                            {type : 'min', name: '最小值'}
+                        ]
+                    },
+                    markLine : {
+                        data : [
+                            {type : 'average', name: '平均值'}
+                        ]
+                    }
+                },
+                {
+                    name:'成功订单',
+                    type:'bar',
+                    data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                    markPoint : {
+                        data : [
+                            {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183},
+                            {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+                        ]
+                    },
+                    markLine : {
+                        data : [
+                            {type : 'average', name : '平均值'}
+                        ]
+                    }
+                }
+
+            ],
+              color : ['#53A8E2 ' , '#67DAFB ', '#ADBDD7 ', '#d48265', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3']
+        }
+        myChart1.setOption(option);
+
+    };
+    barChart();
+</script>
+</body>
+</html>
